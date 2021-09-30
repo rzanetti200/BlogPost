@@ -33,47 +33,29 @@
 
     <h1> here is some sample code demonstrating how this would happen</h1>
 
-    <h2>Type Writer animation and animation-timing-function code</h2>
-<p>
-    <pre>.typewriter {
-        font-family: Courier, monospace;
-        display: inline-block;
-    }
-    
-    .typewriter-text {
-        display: inline-block;
-          overflow: hidden;
-          letter-spacing: 2px;
-         animation: typing 5s steps(30, end), blink .75s step-end infinite;
-        white-space: nowrap;
-        font-size: 30px;
-        font-weight: 700;
-        border-right: 4px solid red;
-        box-sizing: border-box;
-    }
-    
-    @keyframes typing {
-        from { 
-            width: 0% 
+    <style>
+        #example{
+            display:flex;
+            flex-direction:row;
         }
-        to { 
-            width: 100% 
+
+        #blur{
+            filter:blur(5px);
         }
-    }
-    
-    @keyframes blink {
-        from, to { 
-            border-color: transparent 
+
+        #invert{
+            filter:invert(100%);
         }
-        50% { 
-            border-color: red; 
+
+        #rotation{
+            filter:hue-rotate(50deg);
         }
-    }
-    }</pre><br>
-    <div class="typewriter">
-        <div class="typewriter-text">Web Development is A lot of fun!</div>
-    </div>
-</p>
+
+        #shadow{
+            filter:drop-shadow(20px 20px 5px black);
+        }
+
+    </style>
 
 </body>
 </html>
