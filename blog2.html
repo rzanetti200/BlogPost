@@ -1,111 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">  
-   <head>
-        <title> <u>Blog #2</u></title>
-        <link rel="stylesheet"  href="styleSheetBlog2.css"/>
-    </head>
-    <body>
-        <h1>Hidding DOM Elements (Blog #2)</h1>
-        <p style="width: 70%;">
-            This week I chose to do research on hiding DOM elements.
-            There are different ways to hide elements depending on what you want the element hidden from. 
-            These options are: completely hidden, semantically hidden, and visually hidden. (see table below)
-        </p>
-        <table>
-            <tr id="top">
-                <th> visibility state </th>
-                <th> on screen </th>
-                <th> in accessibility tree </th>
-                <th> keyboard navigation </th>
-            </tr>
-            <tr>
-                <th>completely hidden</th>
-                <th>hidden</th>
-                <th>hidden</th>
-                <th>not navigatable</th>
-            </tr>
-            <tr>
-                <th>semantically hidden</th>
-                <th>visible</th>
-                <th>hidden</th>
-                <th>navigatable</th>
-            </tr>
-            <tr>
-                <th>visually hidden</th>
-                <th>hidden</th>
-                <th>visible</th>
-                <th>navigatable</th>
-            </tr>
-        </table>
+<html>
 
-        <h2>
-            Completely Hidden:
-        </h2>
-        <p style="width: 70%;">
-            There are three different options for completely hiding elements. 
-            Two options are CSS properties and one is an html property. 
-            Although all these options do the same thing, they will do so in different ways.
-        </p>
-        <h5 style="display: none;">YOU FOUND IT!</h5>
-        <h4>
-            CSS Property Options:
-        </h4>
-        <ul>
-            <li>Display: none</li>
-            <ul>
-                <li>Completely vanishes</li>
-                <li>Takes no space on page</li>
-                <li>Won&apos;t allow animation</li>
-            </ul>
-            <li>Visibility: hidden</li>
-            <ul>
-                <li>Completely vanishes</li>
-                <li>Preserves space on page</li>
-                <li>Allows animation</li>
-                <li>Has ability to unhide nested content</li>
-            </ul>
-        </ul>
-        <h4>
-            HTML5 hidden attribute:
-        </h4>
-        <ul>
-            <li>Element.hidden = true;</li>
-            <ul>
-                <li>this command causes the browsers internal style sheet to hide the element</li>
-            </ul>
-        </ul>
+    <head>
+        <title>Robbie Zanetti's blog</title>
+      </head>
+<body>
+    <body style="background-color:rgb(45, 154, 173);">
 
-        <h2>
-            Semantically Hidden:
-        </h2>
 
-        <p style="width: 70%;">
-            Hiding objects semantically means that we are hiding them from the accessibility tree. 
-            This means that although you can visibly see the object on the screen, software such as a screen reader would not be able to identify it. 
-            This effect is triggered by the following line of code:
-        </p>
-        <img src="blog2Pica.JPG" height="80px">
+    <p>the goal this week was to learn how to make my website more aestetic and user 
+        oriented. Something i stumbled across this week got me excited. i learned how to
+        make links that underline themselves when the user hovers over them. this helps
+        the user know that the link is clickable and makes my website seem more professional.
+    </p>
 
-        <h2>
-            Visually Hidden:
-        </h2>
-        <p style="width: 70%;">
-            Elements are typically visually hidden if we are trying to make sure the structures present in the accessibility tree make sense. 
-            These elements are visible everywhere except for on the physical screen, meaning they are in the accessibility tree and are accessible to keyboard navigation. 
-            Below is a code snippet of how this is achieves: 
-        </p>
-        <img src="blog2Picb.JPG" height="250px">
+    <h1> here is some sample code demonstrating what i have learned:</h1>
 
-        <h2>There is a hidden element on this page. Can you find it?</h2>
-        <p style="font-size:2em;">
-            Resources:
-        </p>
-        <a href="https://css-tricks.com/random-interesting-facts-htmlsvg-usage/">https://css-tricks.com/random-interesting-facts-htmlsvg-usage/</a><br>
-        <a href="https://allyjs.io/tutorials/hiding-elements.html">https://allyjs.io/tutorials/hiding-elements.html</a><br>
-        <a href="https://www.w3schools.com/js/js_htmldom_elements.asp">https://www.w3schools.com/js/js_htmldom_elements.asp</a>
-    </body>
-    <footer>
-        <br>
-        <a href = "index.html">Back</a>
-      </footer>
+    <a href="#" class="coolhov"> This text Highlights itself </a>
+    
+    <marquee>here are my sources</marquee>
+
+    <a href="https://www-it.fmi.uni-sofia.bg/courses/maten/module1/activity32.html#:~:text=Animated%20GIF%20inserting%20to%20HTML,gif%22%3E.">where i learned gifs</a>
+
+<iframe src="https://giphy.com/embed/liXl2cBrdLBY5faUSx" width="278" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/liXl2cBrdLBY5faUSx"></a></p>
+
+<p>here is some sample text that highlighes the custom parameters one can choose when importing a gif</p>
+
+<p>iframe src="https://giphy.com/embed/liXl2cBrdLBY5faUSx" width="278" height="480" frameBorder="0" class="giphy-embed" allowFullScreen</p>
+</body>
 </html>
