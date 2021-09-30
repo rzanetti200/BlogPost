@@ -33,12 +33,47 @@
 
     <h1> here is some sample code demonstrating how this would happen</h1>
 
-    <div id="shapes">
-        <div class="circle"></div>
-        <div class="tri"></div>
-      </div>
+    <h2>Type Writer animation and animation-timing-function code</h2>
+<p>
+    <pre>.typewriter {
+        font-family: Courier, monospace;
+        display: inline-block;
+    }
+    
+    .typewriter-text {
+        display: inline-block;
+          overflow: hidden;
+          letter-spacing: 2px;
+         animation: typing 5s steps(30, end), blink .75s step-end infinite;
+        white-space: nowrap;
+        font-size: 30px;
+        font-weight: 700;
+        border-right: 4px solid red;
+        box-sizing: border-box;
+    }
+    
+    @keyframes typing {
+        from { 
+            width: 0% 
+        }
+        to { 
+            width: 100% 
+        }
+    }
+    
+    @keyframes blink {
+        from, to { 
+            border-color: transparent 
+        }
+        50% { 
+            border-color: red; 
+        }
+    }
+    }</pre><br>
+    <div class="typewriter">
+        <div class="typewriter-text">Web Development is A lot of fun!</div>
     </div>
-    <div class="second">
+</p>
 
 </body>
 </html>
