@@ -1,111 +1,111 @@
-<html>
-    <head>
-        <title>Hailey's Blog Posts - Week 2</title>
-        <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">  
+   <head>
+        <title> <u>Blog #2</u></title>
+        <link rel="stylesheet"  href="styleSheetBlog2.css"/>
     </head>
-
     <body>
-        <h1><center>HB Blogging - Week 2</center></h1>
-        <h4><center>Septemeber 7th, 2021</center></h4>
+        <h1>Hidding DOM Elements (Blog #2)</h1>
+        <p style="width: 70%;">
+            This week I chose to do research on hiding DOM elements.
+            There are different ways to hide elements depending on what you want the element hidden from. 
+            These options are: completely hidden, semantically hidden, and visually hidden. (see table below)
+        </p>
+        <table>
+            <tr id="top">
+                <th> visibility state </th>
+                <th> on screen </th>
+                <th> in accessibility tree </th>
+                <th> keyboard navigation </th>
+            </tr>
+            <tr>
+                <th>completely hidden</th>
+                <th>hidden</th>
+                <th>hidden</th>
+                <th>not navigatable</th>
+            </tr>
+            <tr>
+                <th>semantically hidden</th>
+                <th>visible</th>
+                <th>hidden</th>
+                <th>navigatable</th>
+            </tr>
+            <tr>
+                <th>visually hidden</th>
+                <th>hidden</th>
+                <th>visible</th>
+                <th>navigatable</th>
+            </tr>
+        </table>
 
-        <p>After reading Chapter 3 and 4 this weekend, I was still a little confused on why the box model was so prominent in CSS coding and style. I decided to use this as the focal topic of my blog post this week to give myself a better understanding of how to use it. The 'Box Model' refers to the idea that everything is CSS as a box around it, allowing you to create layouts and ensure alignment between elements. There are two types boxes: block boxes and inline boxes. Before reading this article, I was unsure what the differences were but I have learned that it impacts the way the box interacts with other boxes on the page as well as how the page layout is constructed. This is obviously an important component when it comes to creating an aesthically pleasing website since we can not have elements overlapping or with tons of extra space surronding them. One major difference is that block boxes will break to a new line and inline boxes will not. Both of these features can be useful for different circumstances. Another point that helped me understand this concept further was that each HTML tag has a default box type. Some examples are &lth1&gt and &ltp&gt which are block box type and &lta&gt, &ltspan&gt, and &ltem&gt which are inline type. This idea that every element has a default type can help in understanding why each interact with other tags/elements like they do. Although each has a default type, there is a command in CSS to change the default type so that the element reacts in a different way. </p>
+        <h2>
+            Completely Hidden:
+        </h2>
+        <p style="width: 70%;">
+            There are three different options for completely hiding elements. 
+            Two options are CSS properties and one is an html property. 
+            Although all these options do the same thing, they will do so in different ways.
+        </p>
+        <h5 style="display: none;">YOU FOUND IT!</h5>
+        <h4>
+            CSS Property Options:
+        </h4>
+        <ul>
+            <li>Display: none</li>
+            <ul>
+                <li>Completely vanishes</li>
+                <li>Takes no space on page</li>
+                <li>Won&apos;t allow animation</li>
+            </ul>
+            <li>Visibility: hidden</li>
+            <ul>
+                <li>Completely vanishes</li>
+                <li>Preserves space on page</li>
+                <li>Allows animation</li>
+                <li>Has ability to unhide nested content</li>
+            </ul>
+        </ul>
+        <h4>
+            HTML5 hidden attribute:
+        </h4>
+        <ul>
+            <li>Element.hidden = true;</li>
+            <ul>
+                <li>this command causes the browsers internal style sheet to hide the element</li>
+            </ul>
+        </ul>
 
-<pre>
-element1 {
-    display: inline;
-    color: red;
-    font-size: 10px;
-}
-</pre>
-        <p>The 'display' field can be used to change a default box type to whatever one fits your needs. There is actaully a third common option for a display type which is inline-block. Inline-block allows the element to have the qualities of an inline element but also allows height and width properties to be applied to it. I know this can be confusing to think about but looking at the following three examples showing the difference display proporty options on the same text might make it clearer.</p>
-        <br>    
-<pre>
-&lthtml&gt
-    &lthead&gt
-        &ltstyle&gt
+        <h2>
+            Semantically Hidden:
+        </h2>
 
-        p {
-            display: inline;
-        }
+        <p style="width: 70%;">
+            Hiding objects semantically means that we are hiding them from the accessibility tree. 
+            This means that although you can visibly see the object on the screen, software such as a screen reader would not be able to identify it. 
+            This effect is triggered by the following line of code:
+        </p>
+        <img src="blog2Pica.JPG" height="80px">
 
-        &lt/style&gt
+        <h2>
+            Visually Hidden:
+        </h2>
+        <p style="width: 70%;">
+            Elements are typically visually hidden if we are trying to make sure the structures present in the accessibility tree make sense. 
+            These elements are visible everywhere except for on the physical screen, meaning they are in the accessibility tree and are accessible to keyboard navigation. 
+            Below is a code snippet of how this is achieves: 
+        </p>
+        <img src="blog2Picb.JPG" height="250px">
 
-    &lt/head&gt
-    
-    &ltbody&gt
-
-        &ltp&gt
-	        Here is an example of the display properties on text to see the differences.
-        &lt/p&gt
-
-    &lt/body&gt
-&lt/html&gt
-        
-</pre>
-
-            <img id = "image" src = "inlineex.png" alt = "Inline Text Example" width = 400>
-            <br>
-<pre>
-&lthtml&gt
-    &lthead&gt
-        &ltstyle&gt
-
-        p {
-            display: block;
-        }
-
-        &lt/style&gt
-
-    &lt/head&gt
-    
-    &ltbody&gt
-
-        &ltp&gt
-	        Here is an example of the display properties on text to see the differences.
-        &lt/p&gt
-
-    &lt/body&gt
-&lt/html&gt
-        
-</pre>  
-
-            <img id = "image" src = "blockex.png" alt = "Block Text Example" width = 400>
-            <br>  
-<pre>
-    &lthtml&gt
-        &lthead&gt
-            &ltstyle&gt
-    
-            p {
-                display: inline-block;
-            }
-    
-            &lt/style&gt
-    
-        &lt/head&gt
-        
-        &ltbody&gt
-    
-            &ltp&gt
-                Here is an example of the display properties on text to see the differences.
-            &lt/p&gt
-    
-        &lt/body&gt
-    &lt/html&gt
-            
-    </pre>  
-    
-                <img id = "image" src = "inlineblockex.png" alt = "Inline-Block Text Example" width = 400>
-                <br>        
-        <p>As you can see, there is a slight difference in the amount of space between the top of the 'box' and the actual text which is determined by the display type. Those are the three most common display property options but there are actually many more. In the Reference section at the bottom, you can look at the link labeled 'Example Display Problems' to see all the other property options available in CSS.</p>
-
-        <h4>References</h4>
-
-        <a id = "links" href = "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The Box Model Link</a>
-        <br>
-        <a id = "links" href = "https://www.w3schools.com/cssref/pr_class_display.asp">CSS Display Property</a>
-        <br>
-        <a id = "links" href = "https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display_inline2">Example Display Problems</a>
-
+        <h2>There is a hidden element on this page. Can you find it?</h2>
+        <p style="font-size:2em;">
+            Resources:
+        </p>
+        <a href="https://css-tricks.com/random-interesting-facts-htmlsvg-usage/">https://css-tricks.com/random-interesting-facts-htmlsvg-usage/</a><br>
+        <a href="https://allyjs.io/tutorials/hiding-elements.html">https://allyjs.io/tutorials/hiding-elements.html</a><br>
+        <a href="https://www.w3schools.com/js/js_htmldom_elements.asp">https://www.w3schools.com/js/js_htmldom_elements.asp</a>
     </body>
+    <footer>
+        <br>
+        <a href = "index.html">Back</a>
+      </footer>
 </html>
